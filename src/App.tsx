@@ -198,7 +198,7 @@ export const App = () => {
   );
   useTimeout(
     () => {
-      window.gtag('event', '7364_sms_pds_deposit', { var: 'var2' });
+      window.gtag('event', '7364_sms_pds_deposit_step3', { var: 'var2' });
 
       submit();
     },
@@ -221,7 +221,7 @@ export const App = () => {
   };
 
   const goToStep2 = () => {
-    window.gtag('event', '7364_click_open_pds_deposit_var2');
+    window.gtag('event', '7364_click_open_pds_deposit_step1', { var: 'var2' });
     if (shouldErrorInvestSum) {
       setError('Минимальная сумма — 60 000 ₽');
       return;
@@ -336,7 +336,7 @@ export const App = () => {
             block
             view="primary"
             onClick={() => {
-              window.gtag('event', '7364_click_pay_pds_deposit_var2');
+              window.gtag('event', '7364_click_pay_pds_deposit_step2', { var: 'var2' });
               setSteps('step3');
             }}
           >
